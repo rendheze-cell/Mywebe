@@ -13,7 +13,7 @@ document.getElementById("playerName").textContent =
   (name || surname) ? `${name} ${surname}`.trim() : "Seppo Äijälä";
 
 /* Çark verisi */
-fetch("config/wheel.json")
+fetch(`${API_BASE}/config/wheel.json`)
   .then(r => r.json())
   .then(d => {
     items = d;

@@ -1,6 +1,6 @@
 const grid = document.getElementById("giftGrid");
 
-fetch("config/gifts.json")
+fetch(`${API_BASE}/config/gifts.json`)
   .then(r => r.json())
   .then(gifts => {
     gifts.forEach(g => {

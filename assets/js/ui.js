@@ -1,9 +1,9 @@
 async function loadUI() {
-  const ui = await fetch("config/ui.json").then(r=>r.json()).catch(()=>null);
+  const ui = await fetch(`${API_BASE}/config/ui.json`).then(r=>r.json()).catch(()=>null);
   if(!ui) return null;
 
   // bg.jpg varsa body'ye class ver
-  fetch("assets/images/bg.jpg", { method:"HEAD" })
+  fetch(`${API_BASE}/assets/images/bg.jpg`, { method:"HEAD" })
     .then(()=>document.body.classList.add("has-bg"))
     .catch(()=>{});
 

@@ -1,7 +1,7 @@
 const mount = document.getElementById("formMount");
 const btn = document.getElementById("nextBtn");
 
-fetch("config/form-fields.json")
+fetch(`${API_BASE}/config/form-fields.json`)
   .then(r => r.json())
   .then(fields => {
     fields.forEach(f => {
