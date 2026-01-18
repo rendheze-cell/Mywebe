@@ -1,0 +1,19 @@
+<input id="name">
+<input id="surname">
+<input id="phone">
+<button onclick="go()">Devam</button>
+
+<script src="site.js"></script>
+<script>
+function go(){
+ addUser({
+  id:"u_"+Date.now(),
+  name:name.value,
+  surname:surname.value,
+  phone:phone.value,
+  gift:"",
+  status:"entered"
+ });
+ location.href="wheel.html";
+}
+</script>

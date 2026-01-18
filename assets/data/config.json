@@ -1,0 +1,50 @@
+{
+    "gifts": [
+        {
+            "id": "gift_1",
+            "name": "5000€ Hediye",
+            "image": "",
+            "active": true
+        },
+        {
+            "id": "gift_2",
+            "name": "4500€ Hediye",
+            "image": "",
+            "active": true
+        }
+    ],
+    "wheel": [
+        {
+            "id": "w1",
+            "label": "3000€",
+            "color": "#e74c3c",
+            "weight": 1
+        },
+        {
+            "id": "w2",
+            "label": "4500€",
+            "color": "#f39c12",
+            "weight": 2
+        },
+        {
+            "id": "w3",
+            "label": "5000€",
+            "color": "#27ae60",
+            "weight": 3
+        }
+    ],
+    "lang": {
+        "confirmTitle": "efecan",
+        "confirmSubPrefix": "Seçtiğin hediye:",
+        "load1": "Sistem güvenliğiniz için lütfen sayfadan ayrılmayın",
+        "load2": "Başvurunuz güvenli şekilde işleniyor",
+        "load3": "İşlem yaklaşık 1–2 dakika sürebilir",
+        "load4": "İnternet bağlantınızın stabil olduğundan emin olun",
+        "doneText": "İşlem tamamlandı"
+    },
+    "general": {
+        "loadingMs": 3500,
+        "poweredText": "Powered by",
+        "logging": "on"
+    }
+}

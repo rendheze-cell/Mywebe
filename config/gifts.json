@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vip",
+    "name": "VIP Paket",
+    "icon": "assets/images/gifts/vip.png"
+  },
+  {
+    "id": "coin",
+    "name": "Coin Paketi",
+    "icon": "assets/images/gifts/coin.png"
+  },
+  {
+    "id": "skin",
+    "name": "Özel Skin",
+    "icon": "assets/images/gifts/skin.png"
+  },
+  {
+    "id": "rank",
+    "name": "Rank Yükseltme",
+    "icon": "assets/images/gifts/rank.png"
+  }
+]

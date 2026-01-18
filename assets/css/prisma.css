@@ -1,0 +1,288 @@
+/* RESET + SCROLL KAPAT */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ARKA PLAN */
+body{
+  background-color:#1096d4;
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  color:#fff;
+}
+
+/* SAHNE */
+.page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ========== INDEX (FORM) ========== */
+.center-stack{
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%);
+  width:360px;
+  max-width:calc(100% - 32px);
+  text-align:center;
+}
+
+.h1{
+  font-size:44px;
+  font-weight:800;
+  color:#ffd400;
+  margin-bottom:6px;
+}
+
+.sub{
+  font-size:14px;
+  color:rgba(255,255,255,.9);
+  margin-bottom:20px;
+}
+
+.field{
+  text-align:left;
+  margin-bottom:10px;
+}
+
+.label{
+  font-size:13px;
+  margin-left:6px;
+  margin-bottom:4px;
+}
+
+.input{
+  width:100%;
+  height:48px;
+  padding:0 14px;
+  border:none;
+  border-radius:10px;
+  background:#fff;
+  color:#1a1a1a;
+  font-size:14px;
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+}
+
+.btn{
+  width:100%;
+  height:48px;
+  margin-top:16px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(180deg,#ffe76a,#ffd200);
+  color:#1f1f1f;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* ========== WHEEL ========== */
+.wheel-wrap{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-48%);
+  width:520px;
+  max-width:calc(100% - 40px);
+  text-align:center;
+}
+
+.player{
+  font-size:46px;
+  font-weight:800;
+  color:#ffd400;
+  margin-bottom:6px;
+}
+
+.player-sub{
+  font-size:14px;
+  color:rgba(255,255,255,.9);
+  margin-bottom:18px;
+}
+
+.wheel-stage{
+  position:relative;
+  width:320px;
+  height:320px;
+  margin:0 auto 14px;
+}
+
+.pointer{
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:16px solid transparent;
+  border-right:16px solid transparent;
+  border-bottom:26px solid #ffd86b;
+  z-index:5;
+}
+
+.led-ring{
+  position:absolute;
+  inset:-10px;
+  border-radius:50%;
+  background:conic-gradient(
+    rgba(255,255,255,.9) 0 6deg,
+    rgba(255,255,255,.2) 6deg 12deg
+  );
+  opacity:.9;
+}
+
+canvas{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  display:block;
+}
+
+.btn-wide{
+  width:260px;
+  height:44px;
+  margin:12px auto 0;
+}
+
+/* FOOTER */
+.footer{
+  position:absolute;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  opacity:.85;
+}
+
+.footer img{
+  height:26px;
+}
+/* ========== GIFT SCREEN ========== */
+
+.gift-wrap{
+  position:absolute;
+  left:50%;
+  top:48%;
+  transform:translate(-50%,-50%);
+  width:520px;
+  max-width:calc(100% - 32px);
+  text-align:center;
+}
+
+.gift-grid{
+  margin-top:24px;
+  background:#fff;
+  border-radius:16px;
+  padding:14px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.gift-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  cursor:pointer;
+  transition:.15s ease;
+}
+
+.gift-item:hover{
+  background:#f5f7fb;
+}
+
+.gift-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+  color:#1a1a1a;
+  font-weight:600;
+}
+
+.gift-left img{
+  width:32px;
+  height:32px;
+  object-fit:contain;
+}
+
+.gift-arrow{
+  font-size:22px;
+  color:#9aa3af;
+}
+/* ===== CONFIRM (ESKİ / KARTLI GÜZEL HAL) ===== */
+
+.confirm-wrap{
+  position: relative;
+  z-index: 2;   /* ÇOK ÖNEMLİ */
+  width: 560px;
+  max-width: calc(100% - 32px);
+}
+
+.confirm-card{
+  position: relative;
+  z-index: 3;   /* inputlar bunun içinde */
+  background: rgba(255,255,255,.95);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 22px 48px rgba(0,0,0,.25);
+}
+
+
+.confirm-title{
+  text-align:center;
+  font-weight:800;
+  font-size:32px;
+  color:#111;
+  margin-bottom:6px;
+}
+
+.confirm-sub{
+  text-align:center;
+  font-size:14px;
+  color:#333;
+  margin-bottom:18px;
+}
+
+.dark-label{
+  color:#111;
+}
+
+.confirm-btn{
+  margin-top: 10px;
+}
+/* CONFIRM ARKA PLAN SOFT EFFECT */
+.page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.25);   /* karartma */
+  backdrop-filter: blur(4px);   /* yumuşatma */
+  z-index:0;
+}
+/* CONFIRM'de üst katman tıklamayı yemesin */
+.confirm-page::before{
+  pointer-events: none !important;
+}
+
+/* confirm içeriği her şeyin üstünde olsun */
+.confirm-stack{
+  position: relative;
+  z-index: 10;
+}

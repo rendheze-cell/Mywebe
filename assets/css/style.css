@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root{
+  --bg1:#16b8ff;
+  --bg2:#0077cc;
+  --glass: rgba(255,255,255,.14);
+  --glass2: rgba(255,255,255,.10);
+  --stroke: rgba(255,255,255,.22);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.80);
+  --btn:#ffd400;
+  --btnText:#1a1a1a;
+  --shadow: 0 14px 40px rgba(0,0,0,.20);
+  --radius: 22px;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial; }
+html,body{ height:100%; }
+
+body{
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 30% 15%, rgba(255,255,255,.16), rgba(255,255,255,0) 55%),
+    radial-gradient(900px 500px at 75% 25%, rgba(255,255,255,.12), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  overflow-x:hidden;
+}
+
+/* Eğer bg.jpg koyarsan, foto üstüne degrade oturur (Prisma hissi) */
+body.has-bg{
+  background:
+    radial-gradient(1200px 600px at 30% 15%, rgba(255,255,255,.18), rgba(255,255,255,0) 55%),
+    radial-gradient(900px 500px at 75% 25%, rgba(255,255,255,.14), rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(0,164,255,.70), rgba(0,110,204,.80)),
+    url("../images/bg.jpg") center/cover no-repeat fixed;
+}
+
+.page{
+  min-height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 64px 16px 96px;
+  position:relative;
+}
+
+.shell{
+  width: min(560px, 92vw);
+  text-align:center;
+}
+
+.title{
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.subtitle{
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.card{
+  background: linear-gradient(180deg, var(--glass), var(--glass2));
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.field{
+  width:100%;
+  margin-top: 12px;
+}
+
+.input{
+  width:100%;
+  padding: 16px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.18);
+  outline: none;
+  background: rgba(255,255,255,.94);
+  color:#1b1b1b;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn{
+  width:100%;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--btn);
+  color: var(--btnText);
+  font-size: 16px;
+  font-weight: 800;
+  cursor:pointer;
+  box-shadow: 0 12px 24px rgba(0,0,0,.22);
+}
+
+.btn:active{ transform: translateY(1px); }
+
+.footer{
+  position:fixed;
+  left:0; right:0;
+  bottom: 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  opacity: .90;
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  pointer-events:none;
+}
+
+.footer img{
+  height: 22px;
+  width: auto;
+  filter: drop-shadow(0 8px 14px rgba(0,0,0,.18));
+}
+
+/* Wheel */
+.wheelWrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 10px 0 6px;
+}
+
+.pointer{
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 22px solid rgba(255,255,255,.92);
+  filter: drop-shadow(0 10px 14px rgba(0,0,0,.20));
+  margin: 0 auto 8px;
+}
+
+.canvas{
+  width: 320px;
+  height: 320px;
+  max-width: 80vw;
+  max-height: 80vw;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* Gift list */
+.giftBtn{
+  width:100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.14);
+  color:#fff;
+  font-weight: 700;
+  cursor:pointer;
+  text-align:left;
+}
+
+.giftBtn:hover{
+  background: rgba(255,255,255,.18);
+}
+.small{
+  font-size: 12px;
+  color: rgba(255,255,255,.80);
+  margin-top: 8px;
+}

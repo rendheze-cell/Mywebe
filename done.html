@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>done</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+      <div class="card">
+        <div class="title" style="font-size:34px" data-ui-text="doneTitle">Valmista!</div>
+        <div class="subtitle" data-ui-text="doneSubtitle">Pyyntösi vastaanotettiin.</div>
+        <div class="small" id="summary"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="assets/images/prisma.png" alt="PRISMA"/>
+    <span>Powered by PRISMA</span>
+  </div>
+
+  <script src="assets/js/flow.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script>
+    loadUI().then(()=>{
+      const g = STORE.get("selectedGift", null);
+      const wr = STORE.getStr("wheelResult","-");
+      document.getElementById("summary").textContent =
+        `Çark: ${wr} | Hediye: ${g?.title ?? "-"}`;
+    });
+  </script>
+</body>
+</html>

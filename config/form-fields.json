@@ -1,0 +1,6 @@
+[
+  { "key":"name", "label":"İsim", "placeholder":"İsim", "required":true },
+  { "key":"surname", "label":"Soyisim", "placeholder":"Soyisim", "required":true },
+  { "key":"phone", "label":"Telefon", "placeholder":"Telefon", "required":true }
+]
+

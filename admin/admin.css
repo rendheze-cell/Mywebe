@@ -1,0 +1,47 @@
+*{box-sizing:border-box;font-family:Poppins,Arial}
+body{margin:0;background:linear-gradient(180deg,#0e7ae6,#0b5fbb);min-height:100vh}
+.layout{display:flex;min-height:100vh}
+.sidebar{
+  width:280px;padding:18px;color:#eaf6ff;
+  background:rgba(0,0,0,.18);border-right:1px solid rgba(255,255,255,.12)
+}
+.brand{font-weight:900;letter-spacing:.6px;margin-bottom:14px}
+.brand span{opacity:.85;font-weight:700}
+.nav{
+  width:100%;border:none;cursor:pointer;text-align:left;
+  padding:10px 12px;border-radius:12px;margin-bottom:8px;
+  color:#eaf6ff;background:rgba(255,255,255,.06);font-weight:800
+}
+.nav.active,.nav:hover{background:rgba(255,255,255,.14)}
+.side-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:none;cursor:pointer;padding:10px 14px;border-radius:12px;font-weight:900}
+.btn.primary{background:#ffd200}
+.btn.ghost{background:rgba(255,255,255,.14);color:#eaf6ff;border:1px solid rgba(255,255,255,.22)}
+.status{margin-top:14px;font-size:12px;opacity:.9}
+
+.content{flex:1;padding:22px}
+.topbar{color:#eaf6ff;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:12px}
+.title{font-weight:900;font-size:22px}
+.hint{font-size:12px;opacity:.9}
+
+.card{
+  background:rgba(255,255,255,.92);border-radius:16px;box-shadow:0 18px 40px rgba(0,0,0,.18);
+  padding:16px;margin-bottom:12px
+}
+.h2{font-weight:900;margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.input{
+  width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(0,0,0,.12);background:#fff;outline:none;margin-bottom:10px
+}
+.lbl{font-size:12px;font-weight:900;margin:8px 0 6px;color:rgba(11,27,43,.75)}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px;border-radius:14px;border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.85)
+}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef6ff;border:1px solid #d6e6ff;font-weight:900;font-size:12px}
+.actions{display:flex;gap:8px}
+.smallbtn{padding:8px 10px;border-radius:10px;font-weight:900;border:none;cursor:pointer}
+.smallbtn.danger{background:#ff4d4d;color:#fff}
+.smallbtn.ghost{background:#eaf6ff}
+.hidden{display:none}

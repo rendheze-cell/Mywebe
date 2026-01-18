@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>İşleniyor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background: 
+    radial-gradient(circle at top, rgba(255,255,255,.25), transparent 60%),
+    url("assets/images/bg.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ORTA ALAN */
+.loading-box {
+  text-align: center;
+  z-index: 5;
+}
+
+/* SPINNER */
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,.35);
+  border-top-color: #ffd200;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* INFO KUTUSU */
+.info {
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(8px);
+  padding: 22px 28px;
+  border-radius: 14px;
+  width: 360px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  color: #eaf6ff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.info div {
+  margin-bottom: 10px;
+}
+
+.info div:last-child {
+  margin-bottom: 0;
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #eaf6ff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer img {
+  height: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="loading-box" id="box">
+  <div class="spinner"></div>
+
+  <div class="info">
+    <div>✔ Sistem güvenliğiniz için lütfen sayfadan ayrılmayın</div>
+    <div>✔ Başvurunuz güvenli şekilde işleniyor</div>
+    <div>✔ İşlem yaklaşık 1–2 dakika sürebilir</div>
+    <div>✔ İnternet bağlantınızın stabil olduğundan emin olun</div>
+  </div>
+</div>
+
+<div class="footer">
+  Powered by <img src="assets/images/prisma-logo.png">
+</div>
+
+ <script src="site/config.js"></script>
+<script>
+const cfg = getAdminConfig();
+const loadingMs = cfg?.general?.loadingMs || 3500;
+
+document.getElementById("line1").innerText = cfg?.lang?.load1 || "";
+document.getElementById("line2").innerText = cfg?.lang?.load2 || "";
+document.getElementById("line3").innerText = cfg?.lang?.load3 || "";
+document.getElementById("line4").innerText = cfg?.lang?.load4 || "";
+
+setTimeout(()=>{
+  document.getElementById("doneText").innerText = cfg?.lang?.doneText || "İşlem tamamlandı";
+}, loadingMs);
+</script>
+
+
+
+
+</body>
+</html>

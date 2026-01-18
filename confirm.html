@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+<h2 id="confirmTitle"></h2>
+<p id="confirmSub"></p>
+
+<script src="site/config.js"></script>
+<script>
+const cfg = getAdminConfig();
+if(cfg?.lang){
+  document.getElementById("confirmTitle").innerText = cfg.lang.confirmTitle;
+  document.getElementById("confirmSub").innerText =
+    cfg.lang.confirmSubPrefix + " " + (localStorage.getItem("selected_gift") || "");
+}
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="assets/css/prisma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page confirm-page">
+
+  <div class="center-stack confirm-stack">
+    <div class="h1">ONAY</div>
+    <div class="sub" id="giftText">Seçilen hediye</div>
+
+    <!-- TEK INPUT -->
+ <div class="field">
+  <div class="label">Kullanıcı Adı</div>
+  <input class="input" id="confirmUsername" placeholder="Kullanıcı adını tekrar gir">
+</div>
+
+<button class="btn" id="confirmBtn">ONAYLA</button>
+
+
+   
+   
+  </div>
+
+  <div class="footer">
+    <span>Powered by</span>
+    <img src="assets/images/prisma-logo.png">
+  </div>
+
+</div>
+
+<script src="assets/js/confirm.js"></script>
+</body>
+</html>

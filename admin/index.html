@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prisma • Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">PRISMA <span>Admin</span></div>
+      <button class="nav active" data-tab="logs">Loglar</button>
+      <button class="nav" data-tab="gifts">Hediye İşlemleri</button>
+      <button class="nav" data-tab="lang">Dil Ayarları</button>
+      <button class="nav" data-tab="wheel">Çark Ayarları</button>
+      <button class="nav" data-tab="general">Genel Ayarlar</button>
+
+      <div class="side-actions">
+        <button id="btnSave" class="btn primary">Kaydet</button>
+        <button id="btnReload" class="btn ghost">Yenile</button>
+      </div>
+
+      <div class="status" id="status">Hazır</div>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <div class="title" id="pageTitle">Loglar</div>
+        <div class="hint">Değişiklikler “Kaydet” ile siteye işlenir.</div>
+      </div>
+
+      <section class="card" id="tab-logs">
+        <div class="row">
+          <div class="hint">Log altyapısı için istersen ayrıca ekleriz. (Şimdilik config odaklı.)</div>
+        </div>
+      </section>
+
+      <section class="card hidden" id="tab-gifts">
+        <div class="h2">Hediyeler</div>
+        <div class="grid2">
+          <div>
+            <input id="giftName" class="input" placeholder="Hediye adı">
+            <input id="giftImg" class="input" placeholder="Görsel URL (opsiyonel)">
+            <button id="btnAddGift" class="btn primary">Ekle</button>
+          </div>
+          <div id="giftsList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="card hidden" id="tab-lang">
+        <div class="h2">Dil Metinleri</div>
+        <div class="grid2">
+          <div>
+            <div class="lbl">Confirm başlık</div><input id="tConfirmTitle" class="input">
+            <div class="lbl">Confirm prefix</div><input id="tConfirmSub" class="input">
+          </div>
+          <div>
+            <div class="lbl">Loading 1</div><input id="tLoad1" class="input">
+            <div class="lbl">Loading 2</div><input id="tLoad2" class="input">
+          </div>
+          <div>
+            <div class="lbl">Loading 3</div><input id="tLoad3" class="input">
+            <div class="lbl">Loading 4</div><input id="tLoad4" class="input">
+          </div>
+          <div>
+            <div class="lbl">Done text</div><input id="tDone" class="input">
+          </div>
+        </div>
+      </section>
+
+      <section class="card hidden" id="tab-wheel">
+        <div class="h2">Çark Dilimleri</div>
+        <div class="grid2">
+          <div>
+            <input id="wLabel" class="input" placeholder="Metin (örn 5000€)">
+            <input id="wColor" class="input" placeholder="Renk (örn #27ae60)">
+            <input id="wWeight" class="input" type="number" min="1" max="10" value="1">
+            <button id="btnAddSlice" class="btn primary">Ekle</button>
+          </div>
+          <div id="wheelList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="card hidden" id="tab-general">
+        <div class="h2">Genel</div>
+        <div class="grid2">
+          <div>
+            <div class="lbl">Loading süresi (ms)</div>
+            <input id="gLoadMs" class="input" type="number">
+          </div>
+          <div>
+            <div class="lbl">Powered by</div>
+            <input id="gPowered" class="input">
+          </div>
+          <div>
+            <div class="lbl">Logging</div>
+            <select id="gLogging" class="input">
+              <option value="on">Açık</option>
+              <option value="off">Kapalı</option>
+            </select>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="admin-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+*{box-sizing:border-box;font-family:Poppins,Arial;margin:0;padding:0}
+body{background:#0b1220;color:#fff; padding:24px}
+.wrap{max-width:980px;margin:0 auto}
+h1{font-size:28px;margin-bottom:6px}
+.muted{opacity:.75;margin-bottom:18px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
+.tab.active{background:#ffd400;color:#121212;font-weight:700}
+.panel{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px;background:rgba(255,255,255,.06)}
+.row{display:grid;grid-template-columns: 1fr 1fr 1fr 120px;gap:10px;margin-bottom:10px}
+.input{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.25);color:#fff}
+.btn{padding:10px;border-radius:10px;border:none;background:#ffd400;color:#121212;font-weight:800;cursor:pointer}
+.danger{background:#ff4d4d;color:#fff}
+.actions{display:flex;gap:12px;margin-top:14px;align-items:center}
+#downloadBtn{padding:12px 14px;border-radius:12px;border:none;background:#20c997;color:#081018;font-weight:800;cursor:pointer}
+.upload{padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);cursor:pointer}
+.upload input{display:none}
+.hint{opacity:.85;margin-top:12px}
+code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+.small{opacity:.8;font-size:12px;margin:10px 0}
